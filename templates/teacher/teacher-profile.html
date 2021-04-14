@@ -1,0 +1,55 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block content %}
+  <div class="card">
+    <div class="card-header">
+      <div class="row">
+        <img style="height:200px; width:200px; border-radius:50%; margin:auto" src="{{ teacher.photo.url }}" alt="Photo">
+      </div>
+    </div>
+    <div class="card-body">
+
+      <div class="personal_information">
+        <div class="row">
+          <h2 class="mx-auto">Personal Information</h2>
+        </div>
+        <hr>
+        <div class="row">
+          <div style="font-size:24px; margin-left: 30px">
+            <pre>Name                    : {{ teacher.name }}</pre>
+            <pre>Date of Birth           : {{ teacher.date_of_birth }}</pre>
+            <pre>Place of Birth          : {{ teacher.place_of_birth }}</pre>
+            <pre>Nationality             : {{ teacher.nationality }}</pre>
+            <pre>Religion                : {{ teacher.religion }}</pre>
+            <pre>Gender                  : {{ teacher.gender }}</pre>
+            <pre>Blood Group             : {{ teacher.blood_group }}</pre>
+            <pre>E-TIN                   : {{ teacher.e_tin }}</pre>
+            <pre>National Id no          : {{ teacher.nid }}</pre>
+            <pre>Driving License/Passport: {{ teacher.driving_license_passport }}</pre>
+            <pre>Phone No                : {{ teacher.phone_no }}</pre>
+            <pre>Email                   : {{ teacher.email }}</pre>
+            <pre>Father`s Name           : {{ teacher.father_name }}</pre>
+            <pre>Mother`s Name           : {{ teacher.mother_name }}</pre>
+            <pre>Marital Status          : {{ teacher.marital_status }}</pre>
+            <pre>Address                 : {{ teacher.address }}</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="address_information">
+        <div class="row">
+          <h2 class="mx-auto">Address Information</h2>
+        </div>
+        <hr>
+        <div class="row">
+          <div style="font-size:24px; margin-left: 30px">
+            <pre>District: {{ teacher.address.district }}</pre>
+            <pre>Upazilla: {{ teacher.address.upazilla }}</pre>
+            <pre>Union   : {{ teacher.address.union }}</pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}
